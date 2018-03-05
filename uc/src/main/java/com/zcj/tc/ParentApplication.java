@@ -1,4 +1,4 @@
-package com.zcj.tc.parent;
+package com.zcj.tc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
