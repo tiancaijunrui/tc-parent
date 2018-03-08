@@ -1,12 +1,22 @@
 package com.zcj.tc.model;
 
+import javax.persistence.Column;
 import java.util.Date;
 
 public class Base {
-    private String createBy;
+
+
+    @Column(nullable = false, name = "update_by",length = 32)
     private String updateBy;
+
+    @Column(nullable = false, name = "create_time")
     private Date createTime;
+
+    @Column(nullable = false, name = "update_time")
     private Date updateTime;
+
+    @Column(nullable = false, name = "create_by",length = 32)
+    private String createBy;
 
     public String getCreateBy() {
         return createBy;
