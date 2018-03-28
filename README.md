@@ -1,7 +1,6 @@
 # tc-parent
 
-- db：postgresql
+- db：mySql
 - orm:jpa
-- 数据库池：druid
 - noSql:redis
 
