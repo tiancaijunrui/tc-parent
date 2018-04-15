@@ -6,7 +6,7 @@ import com.zcj.tc.util.ParseMD5Utils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.method.support.ModelAndViewContainer;
+import org.springframework.web.bind.annotation.ResponseBody;
 import reactor.ipc.netty.http.server.HttpServerRequest;
 
 import javax.annotation.Resource;
@@ -29,10 +29,17 @@ public class UserController {
             return "uc/register";
         }
         String exPassword = ParseMD5Utils.parseStrToMd5U32(user.getPassword());
-        if (!password.equals(password)){
+        if (!password.equals(password)) {
 
         }
         return null;
     }
 
+    @RequestMapping("/test")
+    @ResponseBody
+    public JsonResult test() {
+        JsonResult jsonResult = new JsonResult();
+        jsonResult.setStatus(JsonStatus.SUCCESS);
+        return jsonResult;
+    }
 }

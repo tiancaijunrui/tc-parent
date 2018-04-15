@@ -1,18 +1,65 @@
 package com.zcj.tc.model;
 
-public class UserDetail extends Base {
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.Date;
+
+@Entity
+@Table(name = "t_uc_user_detail")
+public class UserDetail {
+
+    @Id
+    @GeneratedValue(generator = "idGenerator")
+    @GenericGenerator(name = "idGenerator", strategy = "uuid")
+    @Column(name = "detailId", length = 32)
     private String detailId;
+
+    @Column(nullable = false, name = "user_id", unique = true, length = 32)
     private String userId;
+
+    @Column(name = "nick_name", length = 50)
     private String nickName;
+
+    @Column(name = "avatar_url")
     private String avatarUrl;
+
+    @Column(name = "gender", length = 20)
     private GenderEnum gender;
+
+    @Column(name = "city", length = 50)
     private String city;
+
+    @Column(name = "province", length = 50)
     private String province;
+
+    @Column(name = "country", length = 50)
     private String country;
+
+    @Column(name = "bind_type", length = 20)
+    @Enumerated(EnumType.STRING)
     private BindTypeEnum bindType;
+
+    @Column(name = "user_type", length = 50)
     private String userType;
+
+    @Column(name = "user_status", length = 50)
     private String userStatus;
+
+    @Column(name = "is_certified", length = 50)
     private String isCertified;
+
+    @Column(nullable = false, name = "update_by", length = 32)
+    private String updateBy;
+
+    @Column(nullable = false, name = "create_time")
+    private Date createTime;
+
+    @Column(nullable = false, name = "update_time")
+    private Date updateTime;
+
+    @Column(nullable = false, name = "create_by", length = 32)
+    private String createBy;
 
     public String getDetailId() {
         return detailId;
