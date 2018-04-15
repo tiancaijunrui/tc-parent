@@ -1,4 +1,4 @@
-package com.zcj.tc.model;
+package com.zcj.tc.model.uc;
 
 import org.hibernate.annotations.GenericGenerator;
 

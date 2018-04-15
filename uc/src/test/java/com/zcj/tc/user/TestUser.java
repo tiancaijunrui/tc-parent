@@ -1,7 +1,6 @@
 package com.zcj.tc.user;
 
-import com.sun.crypto.provider.HmacMD5KeyGenerator;
-import com.zcj.tc.model.User;
+import com.zcj.tc.model.uc.User;
 import com.zcj.tc.repository.UserRepository;
 import com.zcj.tc.util.ParseMD5Utils;
 import org.junit.Test;
@@ -9,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
-import sun.security.provider.MD5;
 
 import javax.annotation.Resource;
 import java.util.Date;

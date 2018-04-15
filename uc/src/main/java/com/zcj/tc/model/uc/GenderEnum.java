@@ -1,11 +1,10 @@
-package com.zcj.tc.model;
+package com.zcj.tc.model.uc;
 
-public enum BindTypeEnum {
-    ALI("阿里巴巴、支付宝"), TENCENT("qq、微信");
-
+public enum GenderEnum {
+    MAN("男"), FEMININE("女");
     private String text;
 
-    private BindTypeEnum(String text) {
+    private GenderEnum(String text) {
         this.text = text;
     }
 

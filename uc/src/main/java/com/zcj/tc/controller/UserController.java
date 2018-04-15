@@ -1,6 +1,6 @@
 package com.zcj.tc.controller;
 
-import com.zcj.tc.model.User;
+import com.zcj.tc.model.uc.User;
 import com.zcj.tc.repository.UserRepository;
 import com.zcj.tc.util.ParseMD5Utils;
 import org.springframework.stereotype.Controller;
